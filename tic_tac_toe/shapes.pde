@@ -5,3 +5,6 @@ void drawBoard() {
   line(334, 0, 334, 500);
 }
 
+void drawOAt0() {
+  ellipse(83.5, 83.5, 167, 167);
+}

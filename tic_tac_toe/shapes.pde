@@ -8,3 +8,8 @@ void drawBoard() {
 void drawOAt0() {
   ellipse(83.5, 83.5, 167, 167);
 }
+
+
+void drawOAt4() {
+  ellipse(250.5, 250.5, 167, 167);
+}

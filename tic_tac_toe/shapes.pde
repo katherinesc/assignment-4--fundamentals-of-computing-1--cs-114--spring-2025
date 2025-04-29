@@ -40,3 +40,17 @@ void drawOAt7() {
 void drawOAt8() {
   ellipse(417.5, 417.5, 167, 167);
 }
+
+void drawXAtSpot(int spot) {
+  int spotSize = 167;
+  int row = spot/3;
+  int column = spot % 3;
+  
+  int x1 = column * spotSize;
+  int y1 = row * spotSize;
+  int x2 = x1 + spotSize;
+  int y2 = y1 + spotSize;
+  
+  line(x1, y1, x2, y2);
+  line(x1, y2, x2, y1);
+}

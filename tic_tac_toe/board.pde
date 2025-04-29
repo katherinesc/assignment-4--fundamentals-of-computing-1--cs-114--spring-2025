@@ -1,8 +1,3 @@
-final int GRIDSIZE = 3;
-
-final char EMPTY = ' ';
-final char COMPUTER = 'X';
-final char PLAYER = 'O';
 
 char[][] board = new char[GRIDSIZE][GRIDSIZE];
 char winner = EMPTY;

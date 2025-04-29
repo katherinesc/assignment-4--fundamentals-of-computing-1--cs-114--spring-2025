@@ -1,4 +1,3 @@
-
 char[][] board = new char[GRIDSIZE][GRIDSIZE];
 char winner = EMPTY;
 
@@ -60,9 +59,9 @@ void keyPressed() {
 void computerMoves() {
   for (int row = 0; row < GRIDSIZE; row++){
     for (int column = 0; column < GRIDSIZE; column++){
+        
       if (board[row][column] == EMPTY){
         board[row][column] = COMPUTER;
-      
         return;
       }
     }

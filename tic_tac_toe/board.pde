@@ -1,4 +1,10 @@
-char[][] board = new char[3][3];
+final int GRIDSIZE = 3;
+
+final char EMPTY = ' ';
+final char COMPUTER = 'X';
+final char PLAYER = 'O';
+
+char[][] board = new char[GRIDSIZE][GRIDSIZE];
 char winner = EMPTY;
 
 void onTheBoard() {
@@ -12,7 +18,7 @@ void onTheBoard() {
 
 void keyPressed() {
   if (winner != EMPTY) {
-    println("Gamer over.");
+    println("Game over.");
     return;
   }
   if (key >= '0' && key <= '8'){
@@ -37,29 +43,31 @@ void keyPressed() {
       
       computerMoves();
       
-      char result = gettingWinner();
-      if (result == COMPUTER){
+      if(gettingWinner() == COMPUTER){
         winner = COMPUTER;
         println("The Computer wins!");
-      } else if (boardFull() == 1){
+        return;
+      }
+      if(boardFull() == 1){
         println("Nobody wins.");
         winner = 'T';
       } else {
         println("Game is still active.");
       }
-      
-    } else {
+    } else { 
       println("That spot is taken, try another.");
     }
-  }else{
-    println("Invalid input. Please press a number from 0 to 8."); 
+  } else {
+    println("Invalid input. Please press a number from 0 to 8.");
   }
 }
+      
 void computerMoves() {
   for (int row = 0; row < GRIDSIZE; row++){
     for (int column = 0; column < GRIDSIZE; column++){
       if (board[row][column] == EMPTY){
         board[row][column] = COMPUTER;
+      
         return;
       }
     }
@@ -81,12 +89,10 @@ char gettingWinner(){
 int boardFull(){
   for (int row = 0; row < GRIDSIZE; row++){
     for(int column = 0; column < GRIDSIZE; column++){
-      if(board[row][column] == EPMTY){
+      if(board[row][column] == EMPTY){
         return 0;
       }
     }
   }
   return 1;
 }
-
-//computerPlays;

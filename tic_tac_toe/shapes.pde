@@ -5,6 +5,14 @@ void drawBoard() {
   line(334, 0, 334, 500);
 }
 
+void drawOAtSpot (int spot){
+  int spotSize = 167;
+  int row  = spot / 3;
+  int column = spot % 3;
+  
+  float centerX = column * spotSize + spotSize / 2;
+  float centerY = row * spotSize + spotSize / 2;
+  ellipse(centerX, centerY, spotSize, spotSize);
 }
 
 void drawXAtSpot(int spot) {

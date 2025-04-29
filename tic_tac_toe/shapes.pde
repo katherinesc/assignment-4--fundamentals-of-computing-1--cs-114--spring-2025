@@ -9,6 +9,10 @@ void drawOAt0() {
   ellipse(83.5, 83.5, 167, 167);
 }
 
+void drawOAt1() {
+  ellipse(250.5, 83.5, 167, 167);
+}
+
 void drawOAt3() {
   ellipse(83.5, 250.5, 167, 167);
 }

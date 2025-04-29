@@ -28,3 +28,17 @@ void drawXAtSpot(int spot) {
   line(x1, y1, x2, y2);
   line(x1, y2, x2, y1);
 }
+
+void drawShapes() {
+  for(int row = 0; row < GRIDSIZE; row++){
+    for(int column = 0; column < GRIDSIZE; column++){
+      int spot = row * GRIDSIZE + column;
+      if(board[row][column] == PLAYER){
+        drawOAtSpot(spot);
+      } else if (board[row][column] == COMPUTER){
+        drawXAtSpot(spot);
+      }
+    }
+  }
+}
+  
